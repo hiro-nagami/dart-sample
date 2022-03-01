@@ -80,7 +80,7 @@ void checkTypes() {
 */
 void intRangeCheck() {
 
-  print("---- checkTypes -----");
+  print("---- intRangeCheck -----");
 
   int bitwize_max = (1 << 31) - 1 + (1 << 31);
   int bitwize_max_invalid = (1 << 32);
@@ -97,10 +97,28 @@ void intRangeCheck() {
   print("\n");
 }
 
+
+/*
+  Type of infer_int is int.
+  Type of infer_string is String.
+*/
+void inference() {
+  print("---- inference -----");
+
+  var infer_int = 12;
+  var infer_string = "Hello";
+
+  print("Type of infer_int is ${infer_int.runtimeType}.");  
+  print("Type of infer_string is ${infer_string.runtimeType}.");
+
+  print("\n");
+}
+
 void main() {
   checkTypes();
   operators(10, 2);
   operators(10, 3);
 
   intRangeCheck();
+  inference();
 }
